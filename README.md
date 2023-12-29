@@ -23,3 +23,7 @@ ChatterBoard Backend relies on a solid technology stack, including:
 - Maven: We manage the project and dependencies efficiently with the Maven build tool, ensuring a streamlined development process.
 - Javalin: Our backend services are powered by the Javalin web framework, providing a robust foundation for handling HTTP requests and responses.
 - MySQL: ChatterBoard Backend utilizes MySQL as the database system, offering secure and reliable data storage for user accounts
+
+## Note
+
+Please update the username and password to match your MySQL workbench user profile in ConnectionUtil.java.

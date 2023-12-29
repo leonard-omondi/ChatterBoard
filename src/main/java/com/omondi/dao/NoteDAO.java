@@ -154,4 +154,23 @@ public class NoteDAO {
         return null;
 
     }
+
+    public boolean updateCommentPriorityById(long id, String priority) {
+        try (Connection connection = ConnectionUtil.getConnection();
+                PreparedStatement ps = connection.prepareStatement("UPDATE messages SET priority=? WHERE id=?")) {
+            ps.setString(1, priority);
+            ps.setLong(2, id);
+
+            int rowsAffected = ps.executeUpdate();
+
+            if (rowsAffected == 1) {
+                return true;
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            e.printStackTrace();
+        }
+        return false;
+    }
+
 }

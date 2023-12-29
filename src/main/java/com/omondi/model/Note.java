@@ -4,15 +4,15 @@ import java.util.Objects;
 
 public class Note {
     private long id;
-    private String comment;
+    private String content;
     private String priority;
 
     public Note() {
     }
 
-    public Note(long id, String comment, String priority) {
+    public Note(long id, String content, String priority) {
         this.id = id;
-        this.comment = comment;
+        this.content = content;
         this.priority = priority;
     }
 
@@ -24,12 +24,12 @@ public class Note {
         this.id = id;
     }
 
-    public String getComment() {
-        return this.comment;
+    public String getContent() {
+        return this.content;
     }
 
-    public void setComment(String comment) {
-        this.comment = comment;
+    public void setContent(String content) {
+        this.content = content;
     }
 
     public String getPriority() {
@@ -45,8 +45,8 @@ public class Note {
         return this;
     }
 
-    public Note comment(String comment) {
-        setComment(comment);
+    public Note content(String content) {
+        setContent(content);
         return this;
     }
 
@@ -63,19 +63,19 @@ public class Note {
             return false;
         }
         Note note = (Note) o;
-        return id == note.id && Objects.equals(comment, note.comment) && Objects.equals(priority, note.priority);
+        return id == note.id && Objects.equals(content, note.content) && Objects.equals(priority, note.priority);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, comment, priority);
+        return Objects.hash(id, content, priority);
     }
 
     @Override
     public String toString() {
         return "{" +
                 " id='" + getId() + "'" +
-                ", comment='" + getComment() + "'" +
+                ", content='" + getContent() + "'" +
                 ", priority='" + getPriority() + "'" +
                 "}";
     }

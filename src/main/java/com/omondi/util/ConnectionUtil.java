@@ -7,9 +7,9 @@ import java.sql.SQLException;
 public class ConnectionUtil {
 
     private static final String URL = "jdbc:mysql://localhost:3306/chatterboard_db";
-
-    private static final String USERNAME = "root";
-    private static final String PASSWORD = "omosh5432";
+    // Use your own MySQL Workbench username and password below
+    private static final String USERNAME = "xxxx";
+    private static final String PASSWORD = "xxxx";
 
     public static Connection getConnection() {
 
